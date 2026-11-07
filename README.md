@@ -6,7 +6,7 @@ Use espaço, seta para cima ou toque/clique na área do jogo para saltar. Esc ou
 
 ## Decisões técnicas
 
-Canvas 2D e módulos nativos atendem ao escopo sem motor ou dependências. A simulação usa passos fixos de 1/120 s e limita o tempo acumulado após uma interrupção. A física, geração com semente, colisões e armazenamento ficam separados da apresentação. Os obstáculos têm áreas de colisão menores que a imagem, e o espaçamento mínimo é de 620 unidades; mesmo na velocidade máxima de 370 unidades/s, há tempo de recuperação entre saltos. O salto tem aproximadamente 160 unidades de altura e 0,82 s de duração. As distâncias apresentadas são unidades de jogo divididas por dez, não uma medida física.
+Canvas 2D e módulos nativos atendem ao escopo sem motor ou dependências. A simulação usa passos fixos de 1/120 s e limita o tempo acumulado após uma interrupção. A física, geração com semente, colisões e armazenamento ficam separados da apresentação. Os grupos de anéis variam em quantidade, posição e altura, dentro de limites que os mantêm antes dos obstáculos e ao alcance da personagem. Os obstáculos têm áreas de colisão menores que a imagem, e o espaçamento mínimo é de 620 unidades; mesmo na velocidade máxima de 370 unidades/s, há tempo de recuperação entre saltos. O salto tem aproximadamente 160 unidades de altura e 0,82 s de duração. As distâncias apresentadas são unidades de jogo divididas por dez, não uma medida física.
 
 ## Arte e limitações
 

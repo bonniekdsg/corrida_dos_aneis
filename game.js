@@ -11,8 +11,19 @@ export function overlaps(a,b) { return a.x < b.x+b.w && a.x+a.w > b.x && a.y < b
 export function spawn(g) {
  const x = g.next; const log = g.random() < .5;
  g.entities.push({type:log?'log':'rock', x, y:GROUND-(log?55:65), w:log?105:76, h:log?55:65});
- // A short accessible arc leads into each obstacle. All values are world coordinates.
- for(let i=0;i<5;i++) g.entities.push({type:'ring', x:x-230+i*57, y:GROUND-48-[0,42,74,42,0][i], w:34, h:34});
+ // Vary each group without placing a ring inside an obstacle. The farthest
+ // group begins after the preceding obstacle, even at the minimum spacing.
+ const count = 1 + Math.floor(g.random() * 6);
+ const spacing = 45 + Math.floor(g.random() * 21);
+ const offset = 60 + Math.floor(g.random() * 81);
+ const baseHeight = 48 + Math.floor(g.random() * 36);
+ const arcHeight = Math.floor(g.random() * 81);
+ const arc = g.random() < .7;
+ for (let i = 0; i < count; i++) {
+  const arcPosition = count === 1 ? .5 : i / (count - 1);
+  const height = baseHeight + (arc ? Math.round(Math.sin(Math.PI * arcPosition) * arcHeight) : 0);
+  g.entities.push({type:'ring', x:x-offset-(count-1-i)*spacing, y:GROUND-height, w:34, h:34});
+ }
  // At top speed this gives over a second from landing to the next jump.
  g.next += 620 + g.random()*150;
 }
