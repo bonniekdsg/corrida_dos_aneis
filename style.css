@@ -1,0 +1,71 @@
+@font-face{font-family:Newsreader;src:url('assets/newsreader-latin-wght-normal.woff2') format('woff2');font-weight:200 900;font-display:swap}*{box-sizing:border-box}html{background:#1c1218;color:#f9eddb}body{margin:0;min-height:100svh;font-family:Arial,sans-serif;background:radial-gradient(ellipse at 50% 30%,#49302b 0,#1c1218 72%)}button{font:inherit}button:focus-visible,a:focus-visible{outline:3px solid #ffe29c;outline-offset:4px}.shell{width:min(1400px,calc(100% - 72px));margin:auto}.top{height:85px;display:flex;align-items:center;justify-content:space-between}.wordmark{color:#f7e6c8;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.19em}.mark{font-size:18px;color:#dfb46c;margin-right:10px}.edition,.bottom{font-size:10px;letter-spacing:.16em;color:#b49b8e}.game-frame{position:relative;overflow:hidden;aspect-ratio:1000/560;background:#442c36;border:1px solid #a7815c;box-shadow:0 24px 80px #08040899;touch-action:manipulation}canvas{display:block;width:100%;height:100%;object-fit:contain}.hud{position:absolute;inset:0 0 auto;display:flex;align-items:flex-start;gap:30px;padding:25px 30px;background:linear-gradient(#241620a8,transparent);pointer-events:none}.hud[hidden]{display:none}.hud-stat{display:grid;gap:4px;text-shadow:0 2px 6px #21131c}.hud-stat span{font-size:9px;letter-spacing:.18em;color:#f3d5a0;font-weight:bold}.hud-stat strong{font-family:Newsreader,serif;font-size:29px;font-weight:500}.hud-stat small{font-size:15px}.pause{pointer-events:auto;margin-left:auto;width:42px;height:42px;border:1px solid #f4d5a18a;background:#321c25ae;color:#fff2dc;border-radius:50%;cursor:pointer}.pause svg{width:20px;fill:none;stroke:currentColor;stroke-width:2}.overlay{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(90deg,#25131fd9,#28182083 48%,#1d172062)}.overlay[hidden]{display:none}.panel{text-align:center;color:#fff3df;padding:22px;max-width:90%;text-shadow:0 2px 14px #26111b}.ornament{font-size:13px;letter-spacing:.3em;color:#e9c582;margin:0 0 12px}.panel h1,.panel h2{font:500 clamp(36px,6vw,76px)/.9 Newsreader,Georgia,serif;letter-spacing:-.025em;margin:0}.panel h1 em{font-weight:400;color:#f2d19a}.panel h2{font-size:clamp(36px,5vw,60px)}.intro{font:400 clamp(15px,1.5vw,20px) Newsreader,serif;margin:20px 0 24px}.primary,.secondary{border:0;cursor:pointer}.primary{background:#edc981;color:#381b24;border-radius:3px;padding:14px 36px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;box-shadow:0 5px 18px #1b0d1577}.primary:hover{background:#ffe0a0}.primary:disabled{opacity:.6;cursor:wait}.secondary{display:block;margin:14px auto 0;background:none;color:#fff2dc;text-decoration:underline;text-underline-offset:4px;font-size:12px}.hint{font-size:10px;letter-spacing:.16em;color:#f4dfbf;margin:20px 0 0}.results{display:flex;justify-content:center;gap:32px;margin:22px 0}.results span{display:block;font-size:9px;letter-spacing:.14em;color:#ecd0a6}.results strong{display:block;font:500 30px Newsreader,serif;margin-top:5px}.bottom{display:flex;justify-content:space-between;gap:12px;padding:19px 0}.bottom p:first-child{font:16px Newsreader,serif;letter-spacing:0;color:#cdb7a5}.bottom span{color:#d9ad68}@media(max-width:650px){.shell{width:calc(100% - 24px)}.top{height:58px}.wordmark{font-size:9px}.edition{display:none}.bottom{padding:10px 0}.bottom p:last-child{display:none}.hud{padding:12px 14px;gap:18px}.hud-stat strong{font-size:21px}.hud-stat span{font-size:8px}.pause{width:34px;height:34px}.panel{padding:8px}.panel h1{font-size:clamp(30px,8vw,48px)}.ornament{margin:0 0 5px}.intro{margin:9px 0 12px;font-size:14px}.primary{padding:10px 25px}.hint{margin:10px 0 0;font-size:8px}.panel h2{font-size:32px}.results{margin:10px 0;gap:20px}.results strong{font-size:22px}.secondary{margin-top:8px}}@media(max-height:500px) and (orientation:landscape){.shell{width:min(100vw,calc((100svh - 20px)*1.786));}.top,.bottom{display:none}.game-frame{max-height:100svh}}
+/* Counters use the supplied gold-and-wine plaque and icons. */
+.hud{align-items:flex-start;gap:10px;background:linear-gradient(#24162088,transparent)}
+.hud-stat{display:flex;align-items:center;gap:3px;width:172px;height:61px;padding:7px 20px 7px 12px;background:url('assets/placa-interface.png') center / 100% 100% no-repeat;filter:drop-shadow(0 3px 4px #21121a80)}
+.hud-stat img{width:43px;height:40px;object-fit:contain;flex:none}.hud-stat div{display:grid;gap:1px}.hud-stat strong{font-size:25px;line-height:1}.hud-stat span{font-size:8px}.hud-stat.distance{margin-left:auto}.hud-stat.distance img{width:29px;height:34px}.pause{margin-left:0}
+@media(max-width:650px){.hud{gap:3px}.hud-stat{width:112px;height:42px;padding:5px 12px 5px 8px}.hud-stat img{width:29px;height:28px}.hud-stat.distance img{width:20px;height:23px}.hud-stat strong{font-size:18px}.hud-stat span{font-size:7px}}
+/* Center the icon and its label/value as one unit within the artwork. */
+.hud-stat{justify-content:center;padding-inline:20px;gap:2px}
+.hud-stat div{min-width:0;justify-items:start}
+.hud-stat strong{white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(max-width:650px){.hud-stat{padding-inline:12px;gap:1px}}
+/* Full-viewport stage and opening composition using the supplied artwork. */
+html,body{width:100%;height:100%;min-height:0;overflow:hidden}
+body{background:#291c26}
+.shell{width:100%;height:100%;height:100svh;margin:0}
+.game-frame{width:100%;height:100%;aspect-ratio:auto;border:0;box-shadow:none;background:#2c2530 url('assets/tela-inicial/cenario-fundo-opaco.png') center/cover no-repeat}
+canvas{width:100%;height:100%;object-fit:contain}
+.overlay:not([hidden]):has(.opening){display:block;background:none}
+.panel.opening{position:absolute;inset:0;max-width:none;padding:0;background:url('assets/tela-inicial/cenario-fundo-opaco.png') center/cover no-repeat;text-shadow:none;overflow:hidden}
+.opening-character{position:absolute;left:2%;bottom:2%;height:88%;width:auto;max-width:48%;object-fit:contain;object-position:bottom left;filter:drop-shadow(0 8px 10px #39201870)}
+.opening-content{position:absolute;left:45%;top:50%;width:46%;max-width:760px;transform:translateY(-48%);display:flex;flex-direction:column;align-items:center;gap:clamp(3px,1vh,12px)}
+.panel .opening-title{margin:0;width:100%;line-height:0}.opening-title img{display:block;width:100%;height:auto}
+.opening-story{width:87%;height:auto;display:block}
+.opening-play{display:block;flex:none;width:88%;aspect-ratio:2149/732;border:0;padding:0;background:transparent url('assets/tela-inicial/botao-jogar.png') center/contain no-repeat;cursor:pointer;transition:transform .18s ease,filter .18s ease}
+.opening-play:hover:not(:disabled){transform:scale(1.035);filter:brightness(1.1)}.opening-play:active:not(:disabled){transform:scale(.98)}.opening-play:disabled{opacity:.65;cursor:wait}
+.opening-hint{width:82%;margin:0;line-height:0}.opening-hint img{width:100%;height:auto}.loading-status{margin:0;font-size:clamp(12px,1vw,16px);color:#fff0cf;text-shadow:0 2px 5px #26111b}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media (orientation:portrait){.opening-character{left:-4%;bottom:1%;height:55%;max-width:70%}.opening-content{top:8%;left:16%;width:78%;transform:none;gap:0}.opening-story{width:92%}.opening-play{width:92%}.opening-hint{width:88%}.panel.opening{background-position:43% center}}
+@media (orientation:landscape) and (max-height:500px){.shell{width:100%;height:100svh}.opening-character{height:94%;bottom:0}.opening-content{width:min(48%,calc(100svh * .82));left:45%;gap:0}.opening-play{width:78%}.opening-story{width:78%}.opening-hint{width:75%}}
+@media (prefers-reduced-motion:reduce){.opening-play{transition:none}}
+/* Fill wide screens without exposing the opening artwork beside the game. */
+@media (orientation:landscape){canvas{object-fit:cover}}
+/* End-of-run screen: supplied artwork with live, accessible results. */
+.overlay:not([hidden]):has(.ending){display:block;background:none}
+.panel.ending{position:absolute;inset:0;max-width:none;padding:0;overflow:hidden;text-shadow:none;background:url('assets/tela-inicial/cenario-fundo-opaco.png') center/cover no-repeat}
+.ending-character{position:absolute;left:2%;bottom:3%;height:83%;max-width:39%;width:auto;object-fit:contain;object-position:bottom left;filter:drop-shadow(0 8px 10px #39201870)}
+.ending-content{position:absolute;left:38%;top:50%;width:54%;max-width:900px;transform:translateY(-49%);display:flex;flex-direction:column;align-items:center;gap:clamp(8px,1.7vh,18px)}
+.panel .ending-title{width:100%;margin:0;line-height:0}.ending-title img{display:block;width:100%;height:auto}
+.ending-message{display:block;width:97%;height:auto}
+.ending-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(3px,1.1vw,18px);width:100%}
+.ending-stat{aspect-ratio:920/625;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(2px,1vh,10px);padding:15% 5% 8%;background:url('assets/tela-reinicio/placa-resultado-vazia.png') center/100% 100% no-repeat;color:#ffedc9;text-shadow:0 2px 3px #310d16;font-family:Newsreader,Georgia,serif}
+.ending-stat span{font-size:clamp(12px,1.8vw,29px);font-weight:700}.ending-stat strong{font-size:clamp(24px,4.2vw,68px);font-weight:500;line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap}.ending-stat small{font-size:.62em}
+.ending-again{width:100%;aspect-ratio:2075/539;border:0;padding:0;background:transparent url('assets/tela-reinicio/botao-jogar-novamente.png') center/contain no-repeat;cursor:pointer;transition:transform .18s ease,filter .18s ease}
+.ending-again:hover{transform:scale(1.025);filter:brightness(1.08)}.ending-again:active{transform:scale(.98)}
+@media(orientation:portrait){.ending-character{left:-4%;bottom:1%;height:50%;max-width:65%}.ending-content{left:5%;top:7%;width:90%;transform:none;gap:clamp(7px,1.2vh,14px)}.ending-stat span{font-size:clamp(10px,3.2vw,18px)}.ending-stat strong{font-size:clamp(20px,6.4vw,38px)}}
+@media(orientation:landscape) and (max-height:500px){.ending-character{height:88%;bottom:0}.ending-content{width:min(53%,calc(100svh * 1.25));left:39%;gap:4px}.ending-stat span{font-size:clamp(9px,3vh,16px)}.ending-stat strong{font-size:clamp(18px,7vh,34px)}}
+@media(prefers-reduced-motion:reduce){.ending-again{transition:none}}
+/* Composição horizontal ajustada aos layouts aprovados no Figma (1440 × 810). */
+@media (orientation:landscape){
+ .panel.opening::before,.panel.ending::before{content:"";position:absolute;background:rgba(0,0,0,.5);filter:blur(min(6.78vw,12.05vh));border-radius:50%;pointer-events:none}
+ .panel.opening::before{left:43.19%;top:3.09%;width:39.24%;height:89.84%}
+ .panel.ending::before{left:44.93%;top:5.19%;width:39.24%;height:89.84%}
+ .opening-character,.ending-character{z-index:1;max-width:none;object-fit:fill;filter:none}
+ .opening-character{left:2.57%;top:11.11%;bottom:auto;width:42.99%;height:83.83%}
+ .ending-character{left:3.68%;top:18.15%;bottom:auto;width:32.22%;height:76.91%}
+ .opening-content,.ending-content{position:absolute;inset:0;width:100%;height:100%;max-width:none;transform:none;display:block;z-index:1}
+ .panel .opening-title,.panel .ending-title{position:absolute;margin:0;line-height:0}
+ .panel .opening-title{left:43.96%;top:11.73%;width:38.06%;filter:drop-shadow(0 12px 10px #0008)}
+ .panel .ending-title{left:40%;top:11.60%;width:44.14%;filter:drop-shadow(0 16px 15px #0009)}
+ .opening-story{position:absolute;left:46.37%;top:37.28%;width:33.11%;height:auto}
+ .opening-play{position:absolute;left:46.26%;top:54.24%;width:33.46%;aspect-ratio:2149/732}
+ .opening-hint{position:absolute;left:47.23%;top:69.78%;width:31.21%;margin:0}
+ .loading-status{position:absolute;top:75%;left:40%;width:45%}
+ .ending-message{position:absolute;left:40.74%;top:33.90%;width:42.78%;height:auto}
+ .ending-results{position:absolute;left:40%;top:43.68%;width:43.40%;height:16.74%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.96%}
+ .ending-stat{position:relative;aspect-ratio:auto;width:100%;height:100%;padding:0;display:block}
+ .ending-stat span,.ending-stat strong{position:absolute;left:4%;width:92%;text-align:center;display:block;line-height:1.1}
+ .ending-stat span{top:30%;font-size:min(1.305vw,2.32vh)}
+ .ending-stat strong{top:53%;font-size:min(2.95vw,5.25vh)}
+ .ending-again{position:absolute;left:40%;top:63.35%;width:44.14%;aspect-ratio:635.621/165.033}
+}

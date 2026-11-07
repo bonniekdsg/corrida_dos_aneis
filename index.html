@@ -1,0 +1,13 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#22151b"><title>A Corrida dos Anéis</title><link rel="stylesheet" href="style.css"></head><body>
+<main class="shell"><section class="game-frame" aria-label="Jogo A Corrida dos Anéis"><canvas id="game" tabindex="-1" width="1000" height="560" aria-label="Área do jogo. Pule para coletar anéis e evitar obstáculos."></canvas>
+<div class="hud" id="hud" hidden><div class="hud-stat"><img src="assets/anel.png" alt=""><div><span>ANÉIS</span><strong id="score">0</strong></div></div><div class="hud-stat distance"><img src="assets/marcador.png" alt=""><div><span>DISTÂNCIA</span><strong id="distance">0 <small>m</small></strong></div></div><button id="pause" class="pause" aria-label="Pausar jogo" title="Pausar jogo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></button></div>
+<div class="overlay" id="overlay"><div class="panel opening" id="panel" aria-live="polite">
+<img class="opening-character" src="assets/tela-inicial/personagem.png" alt="">
+<div class="opening-content">
+<h1 class="opening-title"><img src="assets/tela-inicial/titulo.png" alt="A Corrida dos Anéis"></h1>
+<img class="opening-story" src="assets/tela-inicial/historia-thais-e-jp.png" alt="Thaís atravessa o reino em busca de anéis e do seu amado, o príncipe JP.">
+<button class="opening-play" id="action" disabled aria-label="Jogar"><span class="sr-only">Jogar</span></button>
+<p class="loading-status" id="loading-status" role="status">Carregando…</p>
+<p class="opening-hint" id="hint"><img src="assets/tela-inicial/instrucoes.png" alt="Espaço, seta para cima ou toque para pular"></p>
+</div></div></div></section>
+</main><script type="module" src="main.js"></script></body></html>
